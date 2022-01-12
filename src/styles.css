@@ -21,30 +21,52 @@ body {
 
 /* navbar */
 
-nav {
+header {
     height: 65px;
     background-color: #bdb2ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
     padding: 0 20px;
 }
 
-nav > .nav--logo {
+.header--logo {
     display: flex;
     align-items: center;
     gap: 7px;
 }
 
-.nav--logo > img {
+.header--logo > img {
     width: 31.31px;
     height: 26.22px;
 }
 
-.nav--logo > h1 {
+.header--logo > h1 {
     font-weight: bold;
     font-size: 20.7482px;
     line-height: 24px;
     letter-spacing: -1px;
+}
+
+
+/* meme section */
+
+.meme > input {
+    width: 230px;
+    height: 35px;
+
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+}
+
+.meme > input:focus {
+    outline: none;
+}
+
+.meme > button {
+    width: 477px;
+    height: 40px;
+    border: #8672ff 2px solid;
+    background-color: #bdb2ff;
+    border-radius: 5px;
 }
