@@ -13,6 +13,10 @@ body {
     height: 100vh;
   }
 
+  main {
+      padding: 36px;
+  }
+
 .wrapper {
     width: 550px;
     background-color: #ffffff;
@@ -51,22 +55,25 @@ header {
 
 /* meme section */
 
-.meme > input {
-    width: 230px;
-    height: 35px;
 
-    border: 1px solid #D5D4D8;
+.form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+}
+
+.form--button {
+    grid-column: 1 / -1;
+    font-family: 'Karla', sans-serif;
     border-radius: 5px;
-}
-
-.meme > input:focus {
-    outline: none;
-}
-
-.meme > button {
-    width: 477px;
-    height: 40px;
     border: #8672ff 2px solid;
     background-color: #bdb2ff;
+    cursor: pointer;
+}
+
+.form--input {
+    font-family: 'Karla', sans-serif;
     border-radius: 5px;
+    border: 1px solid #d5d4d8;
+    text-indent: 5px;
 }

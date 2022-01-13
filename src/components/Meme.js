@@ -2,10 +2,24 @@ import React from "react";
 
 export default function Meme() {
     return (
-        <section className="meme">
-            <input type="text" />
-            <input type="text" />
-            <button type="submit">Get a new meme image</button>
-        </section>
+        <main>
+            <form className="form">
+                <input
+                    type="text"
+                    placeholder="Top text"
+                    className="form--input"
+                />
+                <input
+                    type="text"
+                    placeholder="Bottom text"
+                    className="form--input"
+                />
+                <button
+                    className="form--button"
+                >
+                    Get a new meme image
+                </button>
+            </form>
+        </main>
     )
 }
