@@ -1,26 +1,26 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import memesData from "../memesData"
 
 export default function Meme() {
 
-    const [memeImage, setMemeImage] = useState()
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "https://i.imgflip.com/1g8my4.jpg"
+    })
 
-    /**
-     * Challenge: Save the random meme URL in state
-     * - Create new state called `memeImage` with an
-     *   empty string as default
-     * - When the getMemeImage function is called, update
-     *   the `memeImage` state to be the random chosen
-     *   image URL
-     * - Below the div.form, add an <img /> and set the
-     *   src to the new `memeImage` state you created
-     */
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
 
     function getMemeImage() {
-        const memesArray = memesData.data.memes
+        const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
-        setMemeImage(memesArray[randomNumber].url)
+        const url = memesArray[randomNumber].url
+        setMeme(prevMeme => ({
+            topText: "",
+            bottomText: "",
+            randomImage: url
+        }))
     }
 
     return (
@@ -43,7 +43,7 @@ export default function Meme() {
                     Get a new meme image
                 </button>
             </div>
-            <img src={memeImage} className="meme--image " />
+            <img src={meme.randomImage} className="meme--image " />
         </main>
     )
 }
